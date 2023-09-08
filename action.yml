@@ -1,0 +1,32 @@
+name: publish-to-twitter
+description: posts tweets on twitter
+author: IntelOwl
+
+inputs:
+  api_key:
+    description: "Api key"
+    required: true
+  api_key_secret:
+    description: "Api key secret"
+    required: true
+  access_token:
+    description: "Consumer access token"
+    required: true
+  access_token_secret:
+    description: "Consumer access token secret"
+    required: true
+  status:
+    description: "Status to be published to twitter"
+    required: true
+
+outputs:
+  title:
+    description: "Post's title"
+
+runs:
+  using: "python3"
+  main: "twitter_post.py"
+
+branding:
+  icon: "message-circle"
+  color: "blue"
