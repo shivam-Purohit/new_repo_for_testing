@@ -20,7 +20,7 @@ jobs:
           pip install tweepy
 
       - name: Run tweet script
-        uses: ./action.py
+        uses: ./
         with:
           status: publish to twitter
           api_key: ${{ secrets.TWITTER_API_KEY }}
