@@ -26,6 +26,10 @@ outputs:
 runs:
   using: "composite"
   steps:
+    - name: echo the variables
+      run: echo ${{ inputs.api_key }}
+      shell: bash
+      
     - name: Checkout code
       uses: actions/checkout@v2
 
