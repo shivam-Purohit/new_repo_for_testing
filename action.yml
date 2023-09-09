@@ -37,6 +37,7 @@ runs:
     - name: Install dependencies
       run: |
         pip install tweepy
+      shell: bash
 
     - name: Run tweet script
       run: python script.py
