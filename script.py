@@ -1,12 +1,26 @@
 import tweepy
 import os
+import sys
 
-client = tweepy.Client(
-    consumer_key=os.environ.get("api_key"),
-    consumer_secret=os.environ.get("api_key_secret"),
-    access_token=os.environ.get("access_token"),
-    access_token_secret=os.environ.get("access_token_secret")
-)
-print(os.environ.get("api_key"))
-tweet_content = "{{ inputs.status }}"
-# client.create_tweet(text = tweet_content)
+def main():
+    if len(sys.argv) != 6:
+        print("Usage: python script.py api_key api_key_secret access_token access_token_secret status")
+        sys.exit(1)
+
+    api_key, api_key_secret, access_token, access_token_secret, status = sys.argv[1:]
+
+    client = tweepy.Client(
+        consumer_key=api_key,
+        consumer_secret=api_key_secret,
+        access_token=access_token,
+        access_token_secret=access_token_secret
+    )
+
+    print(api_key)  # Print the API key to verify it's received correctly
+
+    tweet_content = status  # Use the 'status' input variable
+
+    # Now you can use the 'tweet_content' and 'client' objects as needed in your script.
+
+if __name__ == "__main__":
+    main()
