@@ -23,10 +23,8 @@ outputs:
   title:
     description: "Post's title"
 
-jobs:
-  build:
-    runs-on: ubuntu-latest
-
+runs:
+  using: "composite"
     steps:
     - name: Checkout code
       uses: actions/checkout@v2
