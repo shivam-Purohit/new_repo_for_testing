@@ -3,9 +3,6 @@ import os
 import sys
 
 def main():
-    if len(sys.argv) != 5:
-        print("Usage: python script.py api_key api_key_secret access_token access_token_secret status")
-        sys.exit(1)
 
     api_key, api_key_secret, access_token, access_token_secret, status = sys.argv[1:]
 
