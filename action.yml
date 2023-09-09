@@ -40,7 +40,7 @@ runs:
       shell: bash
 
     - name: Run tweet script
-      run: python script.py
+      run: python script.py ${{ inputs.api_key }} ${{ inputs.api_key_secret }} ${{ inputs.access_token }} ${{ inputs.access_token_secret }} ${{ inputs.status }}
       shell: bash
 
 branding:
