@@ -7,5 +7,5 @@ client = tweepy.Client(
     access_token_secret="{{ inputs.access_token_secret }}"
 )
 
-tweet_content = status = "{{ inputs.status }}"
+tweet_content = "{{ inputs.status }}"
 client.create_tweet(text = tweet_content)
