@@ -1,5 +1,4 @@
 import tweepy
-import os
 
 client = tweepy.Client(
     consumer_key="{{ inputs.api_key }}",
