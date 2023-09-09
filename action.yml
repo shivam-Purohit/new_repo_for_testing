@@ -23,23 +23,25 @@ outputs:
   title:
     description: "Post's title"
 
-runs:
-  runs-on: ubuntu-latest
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
+    - name: Checkout code
+      uses: actions/checkout@v2
 
-      - name: Set up Python
-        uses: actions/setup-python@v3
-        with:
-          python-version: 3.x
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.x  # Replace with your desired Python version
 
-      - name: Install dependencies
-        run: |
-          pip install tweepy
+    - name: Install dependencies
+      run: |
+        pip install tweepy
 
-      - name: Run tweet script
-        run : python3 script.py
+    - name: Run tweet script
+      run: python script.py 
 
 branding:
   icon: "message-circle"
