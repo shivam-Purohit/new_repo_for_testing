@@ -1,13 +1,13 @@
 name: publish-to-twitter
-description: posts tweets on twitter
+description: posts tweets on Twitter
 author: IntelOwl
 
 inputs:
   api_key:
-    description: "Api key"
+    description: "API key"
     required: true
   api_key_secret:
-    description: "Api key secret"
+    description: "API key secret"
     required: true
   access_token:
     description: "Consumer access token"
@@ -16,7 +16,7 @@ inputs:
     description: "Consumer access token secret"
     required: true
   status:
-    description: "Status to be published to twitter"
+    description: "Status to be published to Twitter"
     required: true
 
 outputs:
@@ -25,21 +25,21 @@ outputs:
 
 runs:
   using: "composite"
-    steps:
+  steps:
     - name: Checkout code
       uses: actions/checkout@v2
 
     - name: Set up Python
       uses: actions/setup-python@v2
       with:
-        python-version: 3.x  # Replace with your desired Python version
+        python-version: 3.x
 
     - name: Install dependencies
       run: |
         pip install tweepy
 
     - name: Run tweet script
-      run: python script.py 
+      run: python script.py
 
 branding:
   icon: "message-circle"
