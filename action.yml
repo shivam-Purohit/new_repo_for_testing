@@ -41,6 +41,7 @@ runs:
 
     - name: Run tweet script
       run: python script.py
+      shell: bash
 
 branding:
   icon: "message-circle"
