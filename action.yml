@@ -25,7 +25,7 @@ outputs:
 
 runs:
   using: "node16"
-  main: "python script.py"
+  main: "script.py"
 
 branding:
   icon: "message-circle"
