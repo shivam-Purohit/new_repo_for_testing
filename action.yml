@@ -24,8 +24,22 @@ outputs:
     description: "Post's title"
 
 runs:
-  using: "node16"
-  main: "script.py"
+  runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v3
+        with:
+          python-version: 3.x
+
+      - name: Install dependencies
+        run: |
+          pip install tweepy
+
+      - name: Run tweet script
+        run : python3 script.py
 
 branding:
   icon: "message-circle"
