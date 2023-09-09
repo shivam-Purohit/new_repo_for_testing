@@ -24,7 +24,7 @@ outputs:
     description: "Post's title"
 
 runs:
-  using: "node12"
+  using: "python3"
   main: "script.py"
 
 branding:
