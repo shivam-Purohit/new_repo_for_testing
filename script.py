@@ -1,4 +1,5 @@
 import tweepy
+import os
 
 client = tweepy.Client(
     consumer_key=os.environ.get("api_key"),
