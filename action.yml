@@ -24,9 +24,8 @@ outputs:
     description: "Post's title"
 
 runs:
-  using: "docker"
-  image: "python:3.x"
-  command: "python script.py"
+  using: "node16"
+  main: "python script.py"
 
 branding:
   icon: "message-circle"
