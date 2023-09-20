@@ -22,7 +22,7 @@ jobs:
       - name: Run tweet script
         uses: ./
         with:
-          status: publish to twitter
+          status: "publish to twitter"
           api_key: ${{ secrets.TWITTER_API_KEY }}
           api_key_secret: ${{ secrets.TWITTER_API_KEY_SECRET }}
           access_token: ${{ secrets.TWITTER_ACCESS_TOKEN }}
