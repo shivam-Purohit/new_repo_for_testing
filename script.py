@@ -2,8 +2,6 @@ import tweepy
 import os
 import sys
 
-def main():
-
     api_key = sys.argv[1]
     api_key_secret = sys.argv[2]
     access_token = sys.argv[3]
@@ -25,5 +23,3 @@ def main():
 
     # Now you can use the 'tweet_content' and 'client' objects as needed in your script.
 
-if __name__ == "__main__":
-    main()
