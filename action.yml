@@ -44,7 +44,7 @@ runs:
       shell: bash
 
     - name: Run tweet script
-      run: python script.py ${{ inputs.api_key }} ${{ inputs.api_key_secret }} ${{ inputs.access_token }} ${{ inputs.access_token_secret }} ${{ inputs.status }}
+      run: api_key=${{ inputs.api_key }} api_key_secret=${{ inputs.api_key_secret }} access_token=${{ inputs.access_token }} access_token_secret=${{ inputs.access_token_secret }} status=${{ inputs.status }} python3 script.py 
       shell: bash
 
 branding:
