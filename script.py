@@ -17,7 +17,7 @@ def main():
         access_token=access_token,
         access_token_secret=access_token_secret
     )
-
+    print("is this printing")
     print(api_key)  # Print the API key to verify it's received correctly
 
     tweet_content = status  # Use the 'status' input variable
