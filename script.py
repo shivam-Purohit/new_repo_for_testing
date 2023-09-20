@@ -4,11 +4,11 @@ import sys
 
 def main():
 
-    api_key = os.environ['api_key']
-    api_key_secret = os.environ['api_key_secret']
-    access_token = os.environ['access_token']
-    access_token_secret = os.environ['access_token_secret']
-    status = os.environ['status']
+    api_key = sys.argv[0]
+    api_key_secret = sys.argv[1]
+    access_token = sys.argv[2]
+    access_token_secret = sys.argv[3]
+    status = sys.argv[4]
 # api_key_secret, access_token, access_token_secret, status = sys.argv[1:]
 
     client = tweepy.Client(
