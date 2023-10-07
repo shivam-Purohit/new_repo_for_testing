@@ -1,0 +1,14 @@
+{
+  "name": "twitter_post",
+  "version": "1.0.0",
+  "description": "Github action for posting a tweet on X ( twitter) ",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "Shivam Purohit",
+  "license": "ISC",
+  "dependencies": {
+    "twitter-api-client": "^1.2.1"
+  }
+}
