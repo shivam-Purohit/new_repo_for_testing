@@ -9,7 +9,6 @@
   "author": "Shivam Purohit",
   "license": "ISC",
   "dependencies": {
-    "twitter-api-client": "^1.2.1",
     "twitter-api-v2": "^1.15.1"
   }
 }
