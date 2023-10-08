@@ -19,12 +19,10 @@ const {
         });
 
       await userClient.v2.tweet(INPUT_STATUS);
-      process.exit(1);
 
     } catch (err) {
       console.log(err);
       console.log(`::error ::${err.data}`);
-      process.exit(1);
     }
 
   })();
